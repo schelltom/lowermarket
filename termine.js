@@ -6,6 +6,7 @@
 //  - time:  Uhrzeit, z. B. '19:00'
 //  - title: Name der Veranstaltung
 //  - venue: Ort / Adresse
+//  - time, tag, ticketUrl: optional (Uhrzeit, Label statt "Open Air", Vorverkaufs-Link)
 //  Die Seite sortiert automatisch nach Datum und markiert
 //  vergangene Termine als "Gespielt".
 // ============================================================
@@ -18,6 +19,10 @@ const gigs = [
 
   { date: '2026-07-26', time: '18:00', title: 'Sommerserenade Vohenstrauß',
     venue: 'Stadtpark, 92648 Vohenstrauß' },
+
+  { date: '2026-11-14', time: '20:00', title: '60s Beatnight (Einlass 19:00 Uhr)', tag: 'Konzert',
+    venue: 'Max-Reger-Halle, Weiden i.d.OPf.',
+    ticketUrl: 'https://okticket.de/index.php?event_id=59978&startReset=ON' },
 
   // 👇 Neuen Termin hier dazuschreiben (Komma nicht vergessen):
   // { date: '2026-09-12', time: '20:00', title: 'Stadtfest Erbendorf',

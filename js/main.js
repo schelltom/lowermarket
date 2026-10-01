@@ -19,10 +19,12 @@ function renderGigs() {
         '<div class="gig-date"><span class="day">' + String(d.getDate()).padStart(2, '0') + '</span>' +
         '<span class="mon">' + MONTHS[d.getMonth()] + '</span></div>' +
         '<div class="gig-info"><h3></h3><p></p></div>' +
-        '<div class="gig-meta"><span class="chip' + (past ? ' muted' : '') + '">' + (past ? 'Gespielt ✓' : 'Open Air') + '</span>' +
-        '<span class="gig-time">' + WD[d.getDay()] + ' · ' + g.time + ' Uhr</span></div>';
+        '<div class="gig-meta"><span class="chip' + (past ? ' muted' : '') + '">' + (past ? 'Gespielt ✓' : (g.tag || 'Open Air')) + '</span>' +
+        '<span class="gig-time">' + WD[d.getDay()] + (g.time ? ' · ' + g.time + ' Uhr' : '') + '</span>' +
+        (g.ticketUrl && !past ? '<a class="btn btn-gold gig-ticket" target="_blank" rel="noopener">Tickets</a>' : '') + '</div>';
       el.querySelector('h3').textContent = g.title;
       el.querySelector('.gig-info p').textContent = g.venue;
+      if (g.ticketUrl && !past) el.querySelector('.gig-ticket').href = g.ticketUrl;
       list.appendChild(el);
     });
 }
