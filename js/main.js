@@ -1,6 +1,6 @@
 // Die Termine kommen aus der Datei termine.js (wird vor diesem Skript geladen).
 
-const MONTHS = ['JAN','FEB','MÄR','APR','MAI','JUN','JUL','AUG','SEP','OKT','NOV','DEZ'];
+const MONTHS = ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'];
 const WD = ['So','Mo','Di','Mi','Do','Fr','Sa'];
 const today = new Date(); today.setHours(0,0,0,0);
 
@@ -22,7 +22,8 @@ function renderGigs() {
       el.className = 'gig' + (past ? ' past' : '');
       el.innerHTML =
         '<div class="gig-date"><span class="day">' + String(d.getDate()).padStart(2, '0') + '</span>' +
-        '<span class="mon">' + MONTHS[d.getMonth()] + '</span></div>' +
+        '<span class="mon">' + MONTHS[d.getMonth()] + '</span>' +
+        '<span class="year">' + d.getFullYear() + '</span></div>' +
         '<div class="gig-info"><h3></h3><p></p></div>' +
         '<div class="gig-meta"><span class="chip' + (past ? ' muted' : '') + '">' + (past ? 'Gespielt ✓' : (g.tag || 'Open Air')) + '</span>' +
         '<span class="gig-time">' + WD[d.getDay()] + (g.time ? ' · ' + g.time + ' Uhr' : '') + '</span>' +

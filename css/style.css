@@ -150,6 +150,8 @@
   }
   .gig-date .day { font-size: 2.6rem; line-height: 1; color: var(--gold); display: block; }
   .gig-date .mon { font-size: 1rem; letter-spacing: .14em; color: var(--ink-dim); }
+  .gig-date .mon, .gig-date .year { display: block; }
+  .gig-date .year { font-size: .85rem; letter-spacing: .14em; color: var(--ink-dim); opacity: .7; margin-top: 2px; }
   .gig-info h3 { margin: 0 0 2px; font-size: 1.15rem; }
   .gig-info p { margin: 0; color: var(--ink-dim); font-size: .95rem; }
   .gig-meta { text-align: right; display: flex; flex-direction: column; gap: 6px; align-items: flex-end; }
