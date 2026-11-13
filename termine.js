@@ -24,6 +24,9 @@ const gigs = [
     venue: 'Max-Reger-Halle, Weiden i.d.OPf.',
     ticketUrl: 'https://okticket.de/index.php?event_id=59978&startReset=ON' },
 
+  { date: '2027-06-22', time: '19:00', title: 'Sommerserenade Moosbach',
+    venue: 'Generationenpark Gruberbach Moosbach' },
+
   // 👇 Neuen Termin hier dazuschreiben (Komma nicht vergessen):
   // { date: '2026-09-12', time: '20:00', title: 'Stadtfest Erbendorf',
   //   venue: 'Marktplatz, 92681 Erbendorf' },
