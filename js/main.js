@@ -9,12 +9,8 @@ function renderGigs() {
   list.innerHTML = '';
   gigs
     .slice()
-    .sort((a, b) => {
-      // Kommende Termine zuerst (nächster ganz oben), vergangene danach (jüngster zuerst)
-      const pa = new Date(a.date + 'T00:00:00') < today, pb = new Date(b.date + 'T00:00:00') < today;
-      if (pa !== pb) return pa ? 1 : -1;
-      return pa ? b.date.localeCompare(a.date) : a.date.localeCompare(b.date);
-    })
+    // Nach Datum (Jahr, Monat, Tag), neuester Termin zuerst
+    .sort((a, b) => b.date.localeCompare(a.date))
     .forEach(g => {
       const d = new Date(g.date + 'T00:00:00');
       const past = d < today;
