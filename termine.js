@@ -27,6 +27,9 @@ const gigs = [
   { date: '2027-06-22', time: '19:00', title: 'Sommerserenade Moosbach',
     venue: 'Generationenpark Gruberbach Moosbach' },
 
+  { date: '2027-07-08', time: '19:00', title: 'Sommerserenade Neustadt/WN',
+    venue: 'Freizeitanlage Neustadt/WN' },
+
   // 👇 Neuen Termin hier dazuschreiben (Komma nicht vergessen):
   // { date: '2026-09-12', time: '20:00', title: 'Stadtfest Erbendorf',
   //   venue: 'Marktplatz, 92681 Erbendorf' },
